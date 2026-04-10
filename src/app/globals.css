@@ -1,26 +1,89 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-neon-blue: #00f0ff;
+  --color-neon-purple: #9d00ff;
+  --color-neon-cyan: #00ffff;
+  
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Custom animations */
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 1;
+      box-shadow: 0 0 15px var(--color-neon-blue);
+    }
+    50% {
+      opacity: .5;
+      box-shadow: 0 0 5px var(--color-neon-blue);
+    }
   }
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --color-bg: #030014;
+  --color-fg: #ffffff;
+  --color-bg-muted: #1e293b;
+  --color-glass-bg: rgba(255, 255, 255, 0.05);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+  --color-card-bg-start: rgba(255, 255, 255, 0.05);
+  --color-card-bg-end: rgba(255, 255, 255, 0.01);
+  --color-card-shadow: rgba(0, 0, 0, 0.3);
+  color-scheme: dark;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Glassmorphism utilities */
+html {
+  scroll-behavior: smooth;
+}
+
+.glass {
+  background: var(--color-glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-glass-border);
+}
+
+.glass-card {
+  background: linear-gradient(145deg, var(--color-card-bg-start) 0%, var(--color-card-bg-end) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--color-glass-border);
+  box-shadow: 0 8px 32px 0 var(--color-card-shadow);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg); 
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-glass-border); 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neon-blue); 
 }
