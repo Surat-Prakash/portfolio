@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Terminal, Lightbulb, Rocket } from "lucide-react";
+import developerPhoto from "@/app/photo.png";
 
 export default function About() {
   const cards = [
@@ -47,12 +48,12 @@ export default function About() {
             className="lg:col-span-7 glass-card p-8 md:p-10 rounded-2xl relative overflow-hidden group"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-neon-purple)]/20 blur-[50px] -z-10 group-hover:bg-[var(--color-neon-purple)]/30 transition-all duration-500" />
-            
+
             <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
               <div className="w-32 h-32 shrink-0 rounded-full border-2 border-[var(--color-neon-cyan)]/30 overflow-hidden relative group-hover:border-[var(--color-neon-cyan)] transition-colors duration-500 hidden md:block">
-                <img 
-                  src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=400&auto=format&fit=crop" 
-                  alt="Profile" 
+                <img
+                  src={developerPhoto.src}
+                  alt="Profile"
                   className="w-full h-full object-cover mix-blend-screen scale-110 group-hover:scale-100 transition-transform duration-500"
                 />
               </div>

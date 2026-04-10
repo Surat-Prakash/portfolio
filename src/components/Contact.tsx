@@ -1,3 +1,4 @@
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -58,7 +59,7 @@ export default function Contact() {
                 <div>
                   <h4 className="text-sm font-semibold tracking-wider opacity-50 uppercase">Phone</h4>
                   <a href="tel:+91XXXXXXXXXX" className="text-lg font-medium hover:text-[var(--color-neon-purple)] transition-colors text-[var(--color-fg)] opacity-90">
-                    +91 XXXXX XXXXX
+                    +91 9997664991
                   </a>
                 </div>
               </div>
@@ -70,7 +71,7 @@ export default function Contact() {
                 <div>
                   <h4 className="text-sm font-semibold tracking-wider opacity-50 uppercase">Location</h4>
                   <span className="text-lg font-medium text-[var(--color-fg)] opacity-90">
-                    India
+                    Agra
                   </span>
                 </div>
               </div>
@@ -102,7 +103,7 @@ export default function Contact() {
                   <label className="text-sm font-medium text-[var(--color-fg)] opacity-70 ml-1">Name</label>
                   <input
                     type="text"
-                    placeholder="John Doe"
+                    placeholder="Surat Prakash"
                     className="bg-black/30 border border-white/5 text-[var(--color-fg)] rounded-xl px-4 py-4 outline-none focus:border-[var(--color-neon-blue)] focus:ring-2 focus:ring-[var(--color-neon-blue)]/50 focus:shadow-[0_0_15px_rgba(0,123,255,0.2)] transition-all"
                   />
                 </div>
@@ -110,7 +111,7 @@ export default function Contact() {
                   <label className="text-sm font-medium text-[var(--color-fg)] opacity-70 ml-1">Email</label>
                   <input
                     type="email"
-                    placeholder="john@example.com"
+                    placeholder="suratprakash@gmail.com"
                     className="bg-black/30 border border-white/5 text-[var(--color-fg)] rounded-xl px-4 py-4 outline-none focus:border-[var(--color-neon-purple)] focus:ring-2 focus:ring-[var(--color-neon-purple)]/50 focus:shadow-[0_0_15px_rgba(157,0,255,0.2)] transition-all"
                   />
                 </div>
@@ -141,7 +142,7 @@ export default function Contact() {
             </Link>
 
             <p className="text-[var(--color-fg)] opacity-60 text-sm">
-              © {new Date().getFullYear()} Cinematic Portfolio. Designed & Built by Surat Prakash.
+              © {new Date().getFullYear()} Portfolio. Designed & Built by Surat Prakash.
             </p>
           </div>
         </footer>

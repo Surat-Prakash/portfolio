@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import CanvasContainer from "./CanvasContainer";
 import Link from "next/link";
 import { ArrowRight, Download } from "lucide-react";
+import developerPhoto from "@/app/photo.png";
 
 export default function Hero() {
   return (
@@ -14,14 +15,14 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 max-w-6xl">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          
+
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-left"
           >
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
@@ -76,7 +77,8 @@ export default function Hero() {
               </Link>
 
               <a
-                href="/resume.pdf"
+                href="/fullstack resume.pdf"
+                download="fullstack resume.pdf"
                 className="w-full sm:w-auto px-6 py-3 border border-[var(--color-neon-cyan)] text-[var(--color-neon-cyan)] font-semibold rounded-full hover:bg-[var(--color-neon-cyan)] hover:text-[var(--color-bg)] transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(0,255,255,0.4)] flex items-center justify-center gap-2"
               >
                 <Download size={18} />
@@ -97,18 +99,18 @@ export default function Hero() {
               className="relative w-80 h-80 md:w-96 md:h-96 rounded-full p-1 bg-gradient-to-br from-[var(--color-neon-cyan)] via-transparent to-[var(--color-neon-purple)]"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-neon-cyan)] to-[var(--color-neon-purple)] blur-[60px] opacity-30 rounded-full animate-pulse z-0" />
-              
+
               <div className="w-full h-full rounded-full overflow-hidden border-4 border-black/50 relative z-10 bg-black/40 flex items-center justify-center">
-                 {/* Place profile image here. Using a generated AI aesthetic image or reliable unsplash placeholder */}
-                <img 
-                  src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=800&auto=format&fit=crop" 
-                  alt="Developer Avatar" 
+                {/* Place profile image here. Using a generated AI aesthetic image or reliable unsplash placeholder */}
+                <img
+                  src={developerPhoto.src}
+                  alt="Developer Avatar"
                   className="w-full h-full object-cover opacity-90 mix-blend-screen"
                 />
               </div>
             </motion.div>
           </motion.div>
-          
+
         </div>
       </div>
 
