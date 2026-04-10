@@ -8,7 +8,7 @@ export default function Experience() {
     {
       role: "Frontend Developer Intern",
       company: "Igniis",
-      duration: "Present",
+      duration: "May2025 - July2025",
       points: [
         "Built responsive UI using React and Flutter",
         "Developed reusable components",
@@ -46,11 +46,11 @@ export default function Experience() {
             >
               {/* Timeline dot */}
               <div className="absolute -left-[41px] md:-left-[57px] mt-1.5 w-5 h-5 rounded-full bg-[var(--color-neon-blue)] ring-4 ring-black shadow-[0_0_15px_var(--color-neon-blue)]" />
-              
+
               <div className="glass-card p-8 rounded-2xl relative overflow-hidden group hover:border-[var(--color-neon-blue)]/50 transition-all duration-300">
                 {/* Glow effect */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-neon-blue)]/10 blur-[50px] -z-10 group-hover:bg-[var(--color-neon-blue)]/20 transition-all duration-500" />
-                
+
                 <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4 gap-2">
                   <div className="flex items-center gap-3">
                     <div className="p-2 glass rounded-lg text-[var(--color-neon-blue)]">
@@ -62,11 +62,11 @@ export default function Experience() {
                     {exp.duration}
                   </span>
                 </div>
-                
+
                 <h4 className="text-lg text-[var(--color-fg)] opacity-80 mb-6 font-medium tracking-wide">
                   {exp.company}
                 </h4>
-                
+
                 <ul className="space-y-3">
                   {exp.points.map((point, i) => (
                     <li key={i} className="flex items-start gap-3 text-[var(--color-fg)] opacity-70">
